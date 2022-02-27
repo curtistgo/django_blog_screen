@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class BlogposttConfig(AppConfig):
-    name = 'blogpostt'
+    name = 'blogpost'
