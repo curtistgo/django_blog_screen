@@ -9,7 +9,7 @@ def blogposts(request):
         'blogposts': blogposts,
         'page_title': 'JavaScript Blog Home',
         } 
-    return render(request, 'blogposts.html', context)
+    return render(request, 'blogpost/blogposts.html', context)
 
 def base(request):
     context = {
