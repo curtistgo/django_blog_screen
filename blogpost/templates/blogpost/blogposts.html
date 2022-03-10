@@ -8,7 +8,11 @@
 
     <ul>
         {% for blogpost in blogposts %}
-            <li>{{ blogpost.title }} ({{ blogpost.publish_date|date:"D, Y M, jS" }} by {{ blogpost.author}})</li>
+            <li>
+                <a href="{% url 'single-post' blogpost.id  %}">
+                    {{ blogpost.title }} ({{ blogpost.publish_date|date:"D, Y M, jS" }} by {{ blogpost.author}})
+                </a>
+            </li>
         {% endfor %}
         </ul>
 {% endblock %}
