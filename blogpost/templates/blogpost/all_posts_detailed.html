@@ -2,25 +2,27 @@
 
 {% block content %}
     {% load static %}
-    <img src="{% static 'base/img/typewriter_pic.png' %}" alt="old fashion typewriter" />
+    <div class="container">
+        <!-- <img src="{% static 'base/img/typewriter_pic.png' %}" alt="old fashion typewriter" /> -->
 
-    <div class="error">{{ error_message }}</div>
-    
-    <section class="blogposts">
-        {% for blogpost in blogposts %}
-            <article>
-                <h2>{{ blogpost.title }}</h2>
-                <p>
-                    <a href="{% url 'single-post' blogpost.id %}">Read Post</a>
-                    {{ blogpost.author }} ({{ blogpost.publish_date|date:"D, Y M, jS" }})
-                </p>
-                {{ blogpost.text }}
-                <form action="{% url 'all-posts' %}" method="POST">
-                    {% csrf_token %}
-                    <input type="hidden" name="post_id" value="{{ blogpost.id }}" />
-                    <button type="submit">Delete</button>
-                </form>
-            </article>
-        {% endfor %}
-    </section>
+        <div class="error">{{ error_message }}</div>
+        
+        <section class="blogposts">
+            {% for blogpost in blogposts %}
+                <article>
+                    <h2>{{ blogpost.title }}</h2>
+                    <p>
+                        <a href="{% url 'single-post' blogpost.id %}">Read Post</a>
+                        {{ blogpost.author }} ({{ blogpost.publish_date|date:"D, Y M, jS" }})
+                    </p>
+                    {{ blogpost.text }}
+                    <form action="{% url 'all-posts' %}" method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="post_id" value="{{ blogpost.id }}" />
+                        <button type="submit">Delete</button>
+                    </form>
+                </article>
+            {% endfor %}
+        </section>
+    </div>
 {% endblock %}

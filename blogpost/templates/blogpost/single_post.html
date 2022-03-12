@@ -2,12 +2,14 @@
 
 {% block content %}
     {% load static %}
-    <img src="{% static 'base/img/typewriter_pic.png' %}" alt="old fashion typewriter" />
+    <div class="container">
+         <!-- <img src="{% static 'base/img/typewriter_pic.png' %}" alt="old fashion typewriter" /> -->
 
-    <h2>{{ post.title }}</h2>
-    <p>by {{ post.author }} on {{ post.publish_date }} </p>
-    {{ post.text }}
-    <a href="{% url 'blogposts' %}">Back</a>
+        <h2>{{ post.title }}</h2>
+        <p>by {{ post.author }} on {{ post.publish_date }} </p>
+        {{ post.text }}
+        <a href="{% url 'blogposts' %}">Back</a>
+    </div>
 
 
 {% endblock %} 

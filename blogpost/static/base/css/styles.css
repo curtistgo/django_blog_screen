@@ -1,0 +1,12 @@
+.banner {
+    background-image: url(../img/typewriter_on_wood_desk.jpg);
+    background-size: cover;
+    font-size: 65px;
+    color:aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+}

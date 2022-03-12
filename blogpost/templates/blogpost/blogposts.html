@@ -2,17 +2,19 @@
 
 {% block content %}
     {% load static %}
-    <img src="{% static 'base/img/typewriter_pic.png' %}" alt="old fashion typewriter" />
+    <div class="container">
+        <!-- <img src="{% static 'base/img/typewriter_pic.png' %}" alt="old fashion typewriter" /> -->
 
-    <p>{{ blogposts|length }} Blogpost{{blogposts|pluralize}}.</p>
+        <p>{{ blogposts|length }} Blogpost{{blogposts|pluralize}}.</p>
 
-    <ul>
-        {% for blogpost in blogposts %}
-            <li>
-                <a href="{% url 'single-post' blogpost.id  %}">
-                    {{ blogpost.title }} ({{ blogpost.publish_date|date:"D, Y M, jS" }} by {{ blogpost.author}})
-                </a>
-            </li>
-        {% endfor %}
+        <ul>
+            {% for blogpost in blogposts %}
+                <li>
+                    <a href="{% url 'single-post' blogpost.id  %}">
+                        {{ blogpost.title }} ({{ blogpost.publish_date|date:"D, Y M, jS" }} by {{ blogpost.author}})
+                    </a>
+                </li>
+            {% endfor %}
         </ul>
+    </div>
 {% endblock %}

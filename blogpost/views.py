@@ -9,7 +9,7 @@ def blogposts(request):
     blogposts = Blogpost.objects.all()
     context = {
         'blogposts': blogposts,
-        'page_title': 'JavaScript Blog',
+        'page_title': 'The Screenwriter\'s Blog',
         }
     return render(request, 'blogpost/blogposts.html', context)
 
@@ -27,7 +27,7 @@ def all_posts(request):
     blogposts = Blogpost.objects.all().order_by('-id')
     context = {
         'blogposts': blogposts,
-        'page_title': 'JavaScript Blog',
+        'page_title': 'Screenwriter\'s Blog',
         'error_message': error_message,
         }
     return render(request, 'blogpost/all_posts_detailed.html', context)

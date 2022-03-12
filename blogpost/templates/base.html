@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width= , initial-scale=1.0">
-    <title>JavaScript Blog</title>
+    <link rel="stylesheet" href="../static/base/css/styles.css">
+    <title>Screenwriting Blog</title>
 </head>
 <body>
     {% load static %}
     <link rel="stylesheet" href="{% static 'base/css/bootstrap.min.css' %}">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">JavaScript Blog</a>
+          <a class="navbar-brand" href="{% url 'blogposts' %}">Screenwriter's Blog</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -30,9 +31,10 @@
           </div>
         </div>
       </nav>
-
-
-    <h1>{{ page_title }}</h1>
+      <section class="banner">The Screenwriter's Blog</section>
+    <div class="container">
+      <h1>{{ page_title }}</h1>
+  </div>
     {% block content %}
     {% endblock %}
     <div class="js-app-container"></div>
@@ -41,8 +43,8 @@
     <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
     <script src="{% static 'base/js/Blogpost.js' %}" type="text/babel"></script>
-    <script src="{% static 'base/js/App.js' %}" type="text/babel">
+    <!-- <script src="{% static 'base/js/App.js' %}" type="text/babel">
       
-    </script>
+    </script> -->
 </body>
 </html>
