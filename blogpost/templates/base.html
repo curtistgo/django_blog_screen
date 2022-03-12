@@ -10,7 +10,7 @@
 <body>
     {% load static %}
     <link rel="stylesheet" href="{% static 'base/css/bootstrap.min.css' %}">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
         <div class="container-fluid">
           <a class="navbar-brand" href="{% url 'blogposts' %}">Screenwriter's Blog</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,10 +31,10 @@
           </div>
         </div>
       </nav>
-      <section class="banner">The Screenwriter's Blog</section>
-    <div class="container">
-      <h1>{{ page_title }}</h1>
-  </div>
+      <section class="banner">
+        The Screenwriter's Blog
+      </section>
+    
     {% block content %}
     {% endblock %}
     <div class="js-app-container"></div>

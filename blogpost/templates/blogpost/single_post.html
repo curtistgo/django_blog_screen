@@ -2,8 +2,10 @@
 
 {% block content %}
     {% load static %}
+
+    
     <div class="container">
-         <!-- <img src="{% static 'base/img/typewriter_pic.png' %}" alt="old fashion typewriter" /> -->
+         <img src="{% static 'base/img/typewriter_pic.png' %}" alt="old fashion typewriter" />
 
         <h2>{{ post.title }}</h2>
         <p>by {{ post.author }} on {{ post.publish_date }} </p>
