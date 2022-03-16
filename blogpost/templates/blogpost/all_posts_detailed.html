@@ -19,7 +19,7 @@
                     <form action="{% url 'all-posts' %}" method="POST">
                         {% csrf_token %}
                         <input type="hidden" name="post_id" value="{{ blogpost.id }}" />
-                        <button type="submit">Delete</button>
+                        <button type="submit" class="del-button">Delete</button>
                     </form>
                 </article>
             {% endfor %}

@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width= , initial-scale=1.0">
-    <link rel="stylesheet" href="../static/base/css/styles.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'base/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/styles.css' %}">
+    {% block /static/css/styles.css %} {% endblock /static/css/styles.css %}
     <title>Screenwriting Blog</title>
 </head>
 <body>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'base/css/bootstrap.min.css' %}">
     <nav class="navbar navbar-expand-lg navbar-dark bg-info">
         <div class="container-fluid">
           <a class="navbar-brand" href="{% url 'blogposts' %}">Screenwriter's Blog</a>
@@ -36,13 +37,21 @@
       </section>
     
     {% block content %}
+  
     {% endblock %}
+
+    <div class="container foot">
+      <footer id="the_year">
+      </footer>
+    </div>
+
     <div class="js-app-container"></div>
     <script src="{% static 'base/js/bootstrap.bundle.min.js' %}"></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
     <script src="{% static 'base/js/Blogpost.js' %}" type="text/babel"></script>
+    <script src="{% static 'base/js/scripts.js' %}"></script>
     <!-- <script src="{% static 'base/js/App.js' %}" type="text/babel">
       
     </script> -->

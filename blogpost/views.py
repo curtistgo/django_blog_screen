@@ -54,3 +54,4 @@ def single_post(request, post_id):
         'post': selected_post
         }
     return render(request, 'blogpost/single_post.html', context)
+

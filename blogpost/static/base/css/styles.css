@@ -10,3 +10,14 @@
     font-family: 'Courier New', Courier, monospace;
     margin-bottom: 20px;
 }
+.foot {
+    border-top: 1px solid black;
+    margin-top: 20px;
+    /* margin-bottom: 20px; */
+    padding-top: 10px;
+
+}
+
+.del-button {
+    border-radius: 10px;
+}
